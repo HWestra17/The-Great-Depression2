@@ -3,10 +3,12 @@ function setup() {
 }
 
 function draw() {
-    var x = width/2;
+   var x = width/2;
     var y = height/2;
     background('#FFFAED');
-    
+}
+
+    this.display = function() {
     //earLeft;
     fill('#FF7F50');
     push();
@@ -15,8 +17,8 @@ function draw() {
     ellipse(0,0, 190, 50);
     pop();
     
-     //earRight;
-   fill('#FF7F50');
+    //earRight;
+    fill('#FF7F50');
     push();
     translate(x+90, y-80);
     rotate(-Math.PI/2);
@@ -61,4 +63,4 @@ function draw() {
     arc(x-20, y+80, 40, 70, 0, PI+QUARTER_PI, CHORD);
     fill('#EE3E36');
     arc(x+10, y+80, 40, 70, 0, PI+QUARTER_PI, -CHORD);
-}
+};
