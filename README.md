@@ -37,3 +37,15 @@ Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 
 <p>This is an <a href="http://example.com/">
 example link</a>.</p>
+
+<p>I get 10 times more traffic from <a href="http://google.com/"
+title="Google">Google</a> than from <a href="http://search.yahoo.com/"
+title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/"
+title="MSN Search">MSN</a>.</p>
+
+<p>I strongly recommend against using any
+<code>&lt;blink&gt;</code> tags.</p>
+
+<p>I wish SmartyPants used named entities like
+<code>&amp;mdash;</code> instead of decimal-encoded
+entites like <code>&amp;#8212;</code>.</p>
