@@ -29,4 +29,11 @@ Some of these words <em>funky</em>.</p>
 <p>Bacon is great <strong>Bacon with eggs is God</strong>.
 Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 
+<ul>
+<li>Candy.</li>
+<li>Gum.</li>
+<li>Booze.</li>
+</ul>
 
+<p>This is an <a href="http://example.com/">
+example link</a>.</p>
