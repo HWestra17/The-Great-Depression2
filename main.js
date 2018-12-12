@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-    background(0, 255, 0);
+    background(140, 115, 115);
     fox.display();
 
     for (var i = 0; i < feed.length; i++) {
@@ -30,12 +30,34 @@ function mousePressed() {
 function Food(x, y) {
     this.x = x;
     this.y = y;
-    this.color = color(255, 0, 0);
-    this.foodSize = 50;
+    this.color = color(128, 255, 0);
+    this.foodSize = 60;
 
     this.display = function () {
         fill(this.color);
         ellipse(this.x, this.y, this.foodSize, this.foodSize);
+        
+        //small ear
+        push();
+        translate(x-30, y-40);
+        rotate(Math.PI / 2);
+        ellipse(0,0, 100, 40);
+        pop();
+        
+        //rightEar
+        push();
+        translate(x+30, y-40);
+        rotate(-Math.PI/2);
+        ellipse(0,0, 100, 40);
+        pop();
+        
+       //Eye
+        fill(102, 0, 0);
+        ellipse(this.x, this.y, 20, 20);
+        
+        //innerEye
+        fill(255, 255, 0);
+        ellipse(this.x, this.y, 5, 20);
     }
 }
 
@@ -121,4 +143,5 @@ function Fox() {
     arc(x-20, y+80, 40, 70, 0, PI+QUARTER_PI, CHORD);
     fill('#EE3E36');
     arc(x+10, y+80, 40, 70, 0, PI+QUARTER_PI, -CHORD);
+    };
 }
