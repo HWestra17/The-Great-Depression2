@@ -1,5 +1,6 @@
 var fox;
 var feed = [];
+var msgs = [];
 var numFood = 10;
 
 var a = [1,2,3];
@@ -20,6 +21,13 @@ function draw() {
 
     for (var i = 0; i < feed.length; i++) {
         feed[i].display();
+    }
+    
+    fill(0);
+    textSize(24);
+    for(var i = 0; i < msgs.length; i++) {
+        console.log(msgs[i]);
+        text(msgs[i].m, msgs[i].x, msgs[i].y);
     }
 }
 
@@ -77,10 +85,20 @@ function Fox() {
             var d = this.getDistance(food);
             var r1 = food.foodSize / 2;
             var r2 = diameter / 2;
+            msgs = []; // remove last 1
             if (r1 + r2 > d) {
+                console.log('eat');
+                var msg = {
+                    m : "Not me!",
+                    x : food.x,
+                    y : food.y
+                };
+                console.log(msg);
+                msgs.push(msg); // add 1
                 feed.splice(i, 1);
                 feed.push(new Food(random(width), random(height)));
             }
+            
         }
     };
 
